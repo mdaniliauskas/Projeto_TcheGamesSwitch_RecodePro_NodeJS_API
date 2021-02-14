@@ -21,7 +21,7 @@ app.get ('/todasmoedas', async (req, res) => {
     res.json(resultado);
 });
 
-app.get ('/moedasespecificas', async (req, res) => {
+app.post ('/moedasespecificas', async (req, res) => {
     const { moedas } = req.body
     const resultado = await moedasEspecificas(moedas)
     res.json(resultado);
