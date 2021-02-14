@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câmbio - conversão de moedas</title>
+</head>
+<body>
+    <h1>Câmbio - conversão de moedas</h1><br>
+    
+
+    <div>
+        <h2>Cotação de diversas moedas em tempo real</h2>
+        <form action='/todasmoedas' method='GET'>
+            <div>
+                    <input type="radio" id="todas" name="todas" value="todas">
+                    <label for="todas">Diversas moedas</label><br><br>
+                    <input type="submit" value="Buscar">
+              </div>
+        </form>
+    </div>
+        <br><br>
+    <div>
+        <h2>Cotações e conversões específicas</h2>
+
+        <form action='/moedasespecificas' method='GET'>
+            <div>
+                <input type="radio" id="USD-BRL" name="moedas" value="USD-BRL">
+                <label for="USD-BRL">Dólar para Real (USD-BRL)</label><br><br>
+                <input type="submit" value="Buscar">
+
+              </div>
+        </form>
+    </div>
+
+</body>
+</html>
