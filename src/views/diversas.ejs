@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Cotação de diversas moedas em tempo real</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>  
+</head>
+<body>
+    <div>
+    <div>
+        <div>
+       
+
+            <h5>Cotação de diversas moedas em tempo real</h5>
+ 
+           
+            <% for (const [key, value] of Object.entries(moeda)) { %>
+            <%= value.name %>
+            <%= value.code %>
+            <%= value.low %>
+            <%= value.high %>
+            <%= value.create_date %>
+            <% } %>
+            
+          
+         
+        
+            
+
+            
+          
+
+
+
+              
+        </div>
+    </div>
+</div>
+
+  
+</body>
+</html>
