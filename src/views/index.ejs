@@ -4,49 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <title>Câmbio - conversão de moedas</title>
 </head>
 <body>
-    <h1>Câmbio - conversão de moedas</h1><br>
+
+    <div class="container">
+        <br>
+        <h1>Câmbio - conversão de moedas</h1>
+        
+        <hr class="my-4"><br>
+        
+        <p class="h4">Cotação de diversas moedas em tempo real</p>
+
+            <form action='/todasmoedas' method='GET'>                
+                <input type="radio" id="todas" name="todas" value="todas">
+                <label for="todas">Diversas moedas</label><br><br>
+                <input class="btn btn-primary" type="submit" value="Buscar">                  
+            </form><br>
+
+            <hr class="my-4">
     
-
-    <div>
-        <h2>Cotação de diversas moedas em tempo real</h2>
-        <form action='/todasmoedas' method='GET'>
-            <div>
-                    <input type="radio" id="todas" name="todas" value="todas">
-                    <label for="todas">Diversas moedas</label><br><br>
-                    <input type="submit" value="Buscar">
-              </div>
-        </form>
-    </div>
-        <br><br>
-    <div>
-        <h2>Cotações e conversões específicas</h2>
-
-        <form action='/moedasespecificas' method='POST'>
-            <div>
-                <input type="radio" id="USD-BRL" name="moedas" value="USD-BRL">
-                <label for="USD-BRL">Dólar para Real (USD-BRL)</label><br><br>
-                
-                <input type="radio" id="EUR-BRL" name="moedas" value="EUR-BRL">
-                <label for="EUR-BRL">Euro para Real (EUR-BRL)</label><br><br>
-
-                <input type="radio" id="JPY-BRL" name="moedas" value="JPY-BRL">
-                <label for="JPY-BRL">Iene para Real (JPY-BRL)</label><br><br>
-
-                <input type="radio" id="BTC-BRL" name="moedas" value="BTC-BRL">
-                <label for="BTC-BRL">Bitcoin para Real (BTC-BRL)</label><br><br>
-                
-                
-                
-                <input type="submit" value="Buscar">
-
-
-
-              </div>
-        </form>
-    </div>
-
+            <p class="h4">Cotações e conversões específicas</p>
+        
+                <form action='/moedasespecificas' method='POST'>
+                        <input type="radio" id="BRL-USD" name="moedas" value="BRL-USD">
+                        <label for="BRL-USD">Dólar para Real (USD-BRL)</label><br><br>
+                        
+                        <input type="radio" id="EUR-BRL" name="moedas" value="EUR-BRL">
+                        <label for="EUR-BRL">Euro para Real (EUR-BRL)</label><br><br>
+        
+                        <input type="radio" id="JPY-BRL" name="moedas" value="JPY-BRL">
+                        <label for="JPY-BRL">Iene para Real (JPY-BRL)</label><br><br>
+        
+                        <input type="radio" id="BTC-BRL" name="moedas" value="BTC-BRL">
+                        <label for="BTC-BRL">Bitcoin para Real (BTC-BRL)</label><br><br>
+                        
+                        <input class="btn btn-primary" type="submit" value="Buscar">
+        
+                </form>
+        
+        </div>
+        
 </body>
 </html>

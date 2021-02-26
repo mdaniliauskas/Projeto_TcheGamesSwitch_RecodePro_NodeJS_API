@@ -3,41 +3,49 @@
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <title>Cotação de diversas moedas em tempo real</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>  
 </head>
+
 <body>
-    <div>
-    <div>
-        <div>
-       
+    <div class="container">
 
-            <h5>Cotação de diversas moedas em tempo real</h5>
- 
-           
-            <% for (const [key, value] of Object.entries(moeda)) { %>
-            <%= value.name %>
-            <%= value.code %>
-            <%= value.low %>
-            <%= value.high %>
-            <%= value.create_date %>
-            <% } %>
-            
-          
-         
+        <br>
+        <p class="h2">Cotação de diversas moedas em tempo real</p>
         
-            
+        <hr class="my-4"><br>
 
-            
-          
+        
+        <table class="table">
+        
+                <th scope="col">Moedas</th>
+                <th scope="col">Cotação mínima</th>
+                <th scope="col">Cotação máxima</th>
+                <th scope="col">Atualização</th> 
+        
+            <tbody>
+                <% for (const [key, value] of Object.entries(moeda)) { %>
 
-
-
-              
-        </div>
-    </div>
-</div>
-
+                <tr>
+                    <th scope="row"><%= value.name %> (<%= value.code %>)</th>
+                    <td><%= value.low %></td>
+                    <td><%= value.high %></td>
+                    <td><%= value.create_date %></td>
+                  </tr>           
+                
+                <% } %>
   
+            </tbody>    
+
+        </table>
+        <hr class="my-4"><br>
+
+        <div style="text-align: right;">
+            <a class="btn btn-primary" href="/" role="button">Voltar</a>
+        </div>
+
+    </div>
+ 
 </body>
 </html>

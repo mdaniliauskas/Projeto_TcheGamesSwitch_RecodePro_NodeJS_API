@@ -3,26 +3,52 @@
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>Page Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <title>Câmbio para Real</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <script src='main.js'></script>
 </head>
+
 <body>
+
     <div class="container">
-    <div class="card mt-2 mb-2">
-        <div class="card-body ">
-            <h5>Cotação específica</h5>
-            <p><%= moeda.USD.name %></p>
-            <p><%= moeda.USD.code %></p>
-            <p><%= moeda.USD.low %></p>
-            <p><%= moeda.USD.high %></p>
-            <p><%= moeda.create_date %></p>
-        </div>
+
+        <br>
+        <p class="h2">Cotação de moedas para Real</p>
+        
+        <hr class="my-4"><br>
+
+    
+        <table class="table">
+        
+            <th scope="col">Moedas</th>
+            <th scope="col">Cotação mínima</th>
+            <th scope="col">Cotação máxima</th>
+            <th scope="col">Atualização</th> 
+    
+        <tbody>
+            <% for (const [key, value] of Object.entries(moeda)) { %>
+
+            <tr>
+                <th scope="row"><%= value.name %> (<%= value.code %>)</th>
+                <td><%= value.low %></td>
+                <td><%= value.high %></td>
+                <td><%= value.create_date %></td>
+              </tr>           
+            
+            <% } %>
+
+        </tbody>         
+
+    </table>
+
+    <br><hr class="my-4"><br>
+
+
+    <div style="text-align: right;">
+        <a class="btn btn-primary" href="/" role="button">Voltar</a>
     </div>
 </div>
             
-//{produtos && produtos.map(item => <ModeloProduto imagem={item.imagem} descricao={item.descricao} precoCheio={item.precoCheio} precoDesconto={item.precoDesconto} categoria={item.categoria} />)}
 
   
 </body>
