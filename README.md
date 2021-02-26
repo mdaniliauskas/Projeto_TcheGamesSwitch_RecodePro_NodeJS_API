@@ -1,6 +1,4 @@
-# Projeto Tche Games Switch - Node JS - Consumindo API
-
-Mais um repositório do Projeto Tche Games Switch
+# Câmbio e cotação de moedas em tempo real consumindo APIs.
 
 Esse projeto é parte do curso de desenvolvedor Full Stack da Recode Pro 2020.
 
